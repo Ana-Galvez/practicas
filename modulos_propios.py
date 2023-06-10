@@ -14,3 +14,17 @@ def raiz ()->float:
     resultado=pow(agregar_radicando,(1/agregar_indice))
     return resultado
 
+def cuantos_dias_faltan()->int:
+    """Función donde el usuario pone mes y día y devuelve los días que faltan"""
+    import datetime
+    mes=int(input("Ingresa el mes de tu nacimiento: "))
+    dia=int(input("Ingresa el día de tu nacimiento: "))
+
+    hoy=datetime.date.today()
+    fecha=datetime.date(hoy.year,mes,dia)
+
+    if fecha<hoy:
+        fecha=fecha.replace(year=hoy.year+1)
+    tiempo_que_falta=fecha-hoy
+    tiempo_que_falta_en_dias=tiempo_que_falta.days
+    return tiempo_que_falta_en_dias

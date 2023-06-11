@@ -1,13 +1,13 @@
 """Este programa agrega, elimina y muestra una lista de tareas"""
 lista_de_tareas=[]
 
-def agregar_tareas():
+def agregar_tareas()->list:
     agregar=input("¿Que tarea/s deseas agregar?:  ")
     agregar_formateado=agregar.capitalize()
     lista_de_tareas.append(agregar_formateado)
     return lista_de_tareas
 
-def eliminar_tareas():
+def eliminar_tareas()->list:
     eliminar=int(input("¿Cuál tarea deseas eliminar (Presiona el número que le corresponda?: "))
     
     if len(lista_de_tareas)!=1:

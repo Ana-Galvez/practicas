@@ -1,4 +1,4 @@
-def primo_o_no(numero):
+def primo_o_no(numero:int)->str:
     for n in range(2, numero):
         if numero % n == 0:
             return f"El numero {numero} NO ES PRIMO"

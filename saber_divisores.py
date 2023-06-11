@@ -1,4 +1,4 @@
-def divisores(numero):
+def divisores(numero:int)->list:
     lista=[]
     for i in range(1, numero+1):
         if numero % i == 0:

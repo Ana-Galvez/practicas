@@ -1,5 +1,5 @@
-from modulos_propios import potencia
-from modulos_propios import raiz
+from modulos_propios_con_matematica import potencia
+from modulos_propios_con_matematica import raiz
 
 def main():
     print("""BIENVENIDO:

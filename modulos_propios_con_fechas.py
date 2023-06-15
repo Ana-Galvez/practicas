@@ -34,3 +34,11 @@ def calculadora_de_dias(fecha_comienzo:str,fecha_final:str)->int:
     resultado=fecha_final_date-fecha_comienzo_date
     dias=resultado.days
     return dias
+
+def dias_hasta_hoy(fecha_de_nacimiento:str):
+    import datetime
+    dia_nac,mes_nac,anio_nac=map(int,fecha_de_nacimiento.split('/'))
+    fecha_de_nacimiento=datetime.date(anio_nac,mes_nac,dia_nac)
+    hoy=datetime.date.today()
+    dias_vividos_hasta_hoy=hoy-fecha_de_nacimiento
+    return dias_vividos_hasta_hoy.days

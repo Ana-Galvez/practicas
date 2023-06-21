@@ -16,8 +16,8 @@ def main():
     """)
         opcion=int(input("Elije la opción con el número correspondiente: "))
         if opcion==1:
-            mes=int(input("Ingresa el mes de tu nacimiento: "))
-            dia=int(input("Ingresa el día de tu nacimiento: "))
+            mes=int(input("Ingresa el mes: "))
+            dia=int(input("Ingresa el día: "))
             dias_que_faltan=modulos_propios_con_fechas.cuantos_dias_faltan(mes,dia)
             print(f"Faltan {dias_que_faltan} días\n -------------")
         elif opcion==2:

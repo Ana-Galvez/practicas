@@ -16,6 +16,9 @@ def cuanto_anios_meses_dias_tengo(fecha_de_nacimiento):
     anios=hoy.year - fecha_de_nacimiento.year
     meses=hoy.month - fecha_de_nacimiento.month
     dias=hoy.day - fecha_de_nacimiento.day
+    if meses<0:
+        anios-=1
+        meses+=12
     #return anios,meses,dias
     
     print(f"Tengo {anios} años, {meses} meses y {dias} días")

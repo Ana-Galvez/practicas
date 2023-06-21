@@ -4,7 +4,6 @@ def cuantos_dias_faltan(mes:int,dia:int)->int:
     
     hoy=datetime.date.today()
     fecha=datetime.date(hoy.year,mes,dia)
-
     if fecha<hoy:
         fecha=fecha.replace(year=hoy.year+1)
     tiempo_que_falta=fecha-hoy
@@ -51,4 +50,7 @@ def cuanto_anios_meses_dias_tengo(fecha_de_nacimiento):
     anios=hoy.year - fecha_de_nacimiento.year
     meses=hoy.month - fecha_de_nacimiento.month
     dias=hoy.day - fecha_de_nacimiento.day
+    if meses<0:
+        anios-=1
+        meses+=12
     return anios,meses,dias

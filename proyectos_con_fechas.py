@@ -11,7 +11,8 @@ def main():
     2- Qué día fue o será
     3- Calcular cuantos días entre 2 fechas
     4- Días vividos hasta hoy
-    5- Salir
+    5- Cuántos años, meses y días tengo
+    6- Salir
     """)
         opcion=int(input("Elije la opción con el número correspondiente: "))
         if opcion==1:
@@ -29,10 +30,14 @@ def main():
             saber_dias=modulos_propios_con_fechas.calculadora_de_dias(fecha_inicio,fecha_final)
             print(f"Pasaron {saber_dias} días\n ----------------")
         elif opcion==4:
-            fecha_de_nacimiento=input("Ingresa la fecha como dia/mes/año: ")
+            fecha_de_nacimiento=input("Ingresa su nacimiento como dia/mes/año: ")
             cuantos_dias_hasta_hoy=modulos_propios_con_fechas.dias_hasta_hoy(fecha_de_nacimiento)
             print(f"Desde que nací hasta hoy, pasaron {cuantos_dias_hasta_hoy} dias\n ----------------")
-        elif opcion==5:
+        elif opcion==5: #falta ver cuando todavía no se cumplió el año
+            fecha_de_nacimiento=input("Ingresa su nacimiento como dia/mes/año: ")
+            anios,meses,dias=modulos_propios_con_fechas.cuanto_anios_meses_dias_tengo(fecha_de_nacimiento)
+            print(f"Tengo {anios} años, {meses} meses y {dias} días\n ----------------")
+        elif opcion==6:
             ingreso_while=False
 
 main()
